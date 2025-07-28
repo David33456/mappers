@@ -36,12 +36,12 @@ defmodule MappersWeb.Router do
     get "/uplinks/hotspot/:hotspot_address", API.V1.UplinkController, :get_hotspot_uplinks
   end
 
-  scope "/api/v1", MappersWeb do
-    pipe_through :api
-    pipe_through :allow_cors
+  # scope "/api/v1", MappersWeb do
+  #   pipe_through :api
+  #   pipe_through :allow_cors
 
-    get "/coverage/geo/:coords", API.V1.CoverageController, :get_coverage_from_geo
-  end
+  #   get "/coverage/geo/:coords", API.V1.CoverageController, :get_coverage_from_geo
+  # end
 
   # Enables LiveDashboard only for development
   #
